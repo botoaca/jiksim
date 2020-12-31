@@ -1,0 +1,288 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/Menu.cs" type="Script" id=1]
+[ext_resource path="res://Fonts/tewi.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Animations/mainMenu.blink.tres" type="Animation" id=3]
+[ext_resource path="res://Assets/Flags/flag_bg.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Flags/flag_ro.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Flags/flag_en.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Flags/flag_cs.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Flags/flag_fr.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Localization.cs" type="Script" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.611765, 0.780392, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 51
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0.45098, 0.588235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 9
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L" type="Panel" parent="Border"]
+anchor_bottom = 1.0
+margin_right = 5.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="U" type="Panel" parent="Border"]
+anchor_right = 1.0
+margin_bottom = 5.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="D" type="Panel" parent="Border"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -5.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Panel" parent="Border"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.99994
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = -300.0
+margin_right = 140.0
+margin_bottom = 300.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_top = 252.0
+margin_right = 280.0
+margin_bottom = 304.0
+custom_fonts/font = SubResource( 2 )
+text = "JIKSIM '21"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_top = 308.0
+margin_right = 280.0
+margin_bottom = 326.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 0.45098, 0.588235, 1 )
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 330.0
+margin_right = 280.0
+margin_bottom = 348.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "QUIT"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="Label" parent="HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 0.45098, 0.588235, 1 )
+text = ">>"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Block" type="Label" parent="HBoxContainer"]
+visible = false
+margin_left = 14.0
+margin_right = 19.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "█"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/Block"]
+autoplay = "Blink"
+anims/Blink = ExtResource( 3 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = -10.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="(c)" type="Label" parent="HBoxContainer2"]
+margin_left = 864.0
+margin_right = 1004.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "(c) 2021 Disapproval, jiktim"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LocalizationButtons" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -100.0
+margin_bottom = -68.0
+alignment = 1
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bulgarian" type="Button" parent="LocalizationButtons"]
+margin_left = 446.0
+margin_right = 469.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 4 )
+
+[node name="Czech" type="Button" parent="LocalizationButtons"]
+margin_left = 473.0
+margin_right = 496.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 7 )
+
+[node name="English" type="Button" parent="LocalizationButtons"]
+margin_left = 500.0
+margin_right = 523.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 6 )
+
+[node name="French" type="Button" parent="LocalizationButtons"]
+margin_left = 527.0
+margin_right = 550.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 8 )
+
+[node name="Romanian" type="Button" parent="LocalizationButtons"]
+margin_left = 554.0
+margin_right = 577.0
+margin_bottom = 32.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 5 )
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_OnPlayPressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_OnQuitPressed"]
+[connection signal="pressed" from="LocalizationButtons/Bulgarian" to="LocalizationButtons" method="_Bulgarian"]
+[connection signal="pressed" from="LocalizationButtons/Czech" to="LocalizationButtons" method="_Czech"]
+[connection signal="pressed" from="LocalizationButtons/English" to="LocalizationButtons" method="_English"]
+[connection signal="pressed" from="LocalizationButtons/French" to="LocalizationButtons" method="_French"]
+[connection signal="pressed" from="LocalizationButtons/Romanian" to="LocalizationButtons" method="_Romanian"]

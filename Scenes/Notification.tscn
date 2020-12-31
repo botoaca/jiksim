@@ -1,0 +1,206 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Fonts/tewi.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/hibiki.png" type="Texture" id=2]
+[ext_resource path="res://Animations/notification.hide.tres" type="Animation" id=3]
+[ext_resource path="res://Animations/notification.show.tres" type="Animation" id=4]
+[ext_resource path="res://Scripts/Notification.cs" type="Script" id=5]
+[ext_resource path="res://Assets/Sounds/notification.ogg" type="AudioStream" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.611765, 0.780392, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0.392157, 1, 1 )
+
+[node name="Notification" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -50.0
+margin_right = 125.0
+margin_bottom = 50.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.235962
+margin_top = -0.235962
+margin_right = -0.235962
+margin_bottom = -0.235962
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Panel" parent="Border"]
+anchor_bottom = 1.0
+margin_right = 5.0
+margin_bottom = 7.62939e-06
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L" type="Panel" parent="Border"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.99998
+margin_right = 1.52588e-05
+margin_bottom = 7.62939e-06
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="U" type="Panel" parent="Border"]
+anchor_right = 1.0
+margin_right = 1.52588e-05
+margin_bottom = 5.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="D" type="Panel" parent="Border"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -4.99999
+margin_right = 1.52588e-05
+margin_bottom = 7.62939e-06
+custom_styles/panel = SubResource( 2 )
+
+[node name="Icon" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 9.0
+margin_top = -40.0
+margin_right = 89.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Icon"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.156, 0.156 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -40.0
+margin_right = 15.0
+margin_bottom = -29.0
+custom_fonts/font = SubResource( 3 )
+text = "Hibiki"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -20.0
+margin_right = 115.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+text = "VOTE_NOTIFICATION"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="."]
+margin_left = 220.0
+margin_top = 10.0
+margin_right = 240.0
+margin_bottom = 21.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vote" type="Button" parent="."]
+margin_left = 145.0
+margin_top = 10.0
+margin_right = 215.0
+margin_bottom = 21.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0.392157, 1, 1 )
+text = "VOTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "notification.show"
+anims/notification.hide = ExtResource( 3 )
+anims/notification.show = ExtResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+[connection signal="pressed" from="Close" to="." method="_OnClosePressed"]
+[connection signal="pressed" from="Vote" to="." method="_OnVotePressed"]
