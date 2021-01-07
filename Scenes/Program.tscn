@@ -1,20 +1,22 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/tewi.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/3D.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Program.cs" type="Script" id=3]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 size = 11
 font_data = ExtResource( 1 )
 
@@ -27,10 +29,11 @@ margin_left = -32.0
 margin_top = -37.5
 margin_right = 32.0
 margin_bottom = 37.5
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -39,6 +42,7 @@ __meta__ = {
 [node name="Icon" type="TextureRect" parent="."]
 anchor_right = 1.0
 margin_bottom = 64.0
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,10 +52,11 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -11.0
-custom_fonts/font = SubResource( 1 )
-text = "test"
+custom_fonts/font = SubResource( 5 )
+text = "3d"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="." to="." method="_OnProgramPressed"]
