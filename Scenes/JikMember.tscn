@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/JikMember.cs" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.5, 1, 0.5 )
+
+[node name="JikMember" type="StaticBody"]
+script = ExtResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.005
+billboard = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
