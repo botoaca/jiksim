@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Assets/screenshot.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,108 @@
 [ext_resource path="res://Assets/Members/noc.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Members/espi.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Members/cth.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Members/sol.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Members/zorbyte.png" type="Texture" id=16]
+[ext_resource path="res://Presets/LoreFont.tres" type="DynamicFont" id=17]
+
+[sub_resource type="ViewportTexture" id=19]
+viewport_path = NodePath("Lore/V1")
+
+[sub_resource type="SpatialMaterial" id=8]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 19 )
+
+[sub_resource type="QuadMesh" id=5]
+resource_local_to_scene = true
+material = SubResource( 8 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="SpatialMaterial" id=10]
+flags_unshaded = true
+albedo_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+
+[sub_resource type="QuadMesh" id=11]
+material = SubResource( 10 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="ViewportTexture" id=20]
+viewport_path = NodePath("Lore/V2")
+
+[sub_resource type="SpatialMaterial" id=14]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 20 )
+
+[sub_resource type="QuadMesh" id=12]
+resource_local_to_scene = true
+material = SubResource( 14 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="SpatialMaterial" id=15]
+flags_unshaded = true
+albedo_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+
+[sub_resource type="QuadMesh" id=16]
+material = SubResource( 15 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="ViewportTexture" id=23]
+viewport_path = NodePath("Lore/V3")
+
+[sub_resource type="SpatialMaterial" id=21]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 23 )
+
+[sub_resource type="QuadMesh" id=22]
+resource_local_to_scene = true
+material = SubResource( 21 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="ViewportTexture" id=34]
+viewport_path = NodePath("Lore/V4")
+
+[sub_resource type="SpatialMaterial" id=25]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 34 )
+
+[sub_resource type="QuadMesh" id=24]
+material = SubResource( 25 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="ViewportTexture" id=32]
+viewport_path = NodePath("Lore/V5")
+
+[sub_resource type="SpatialMaterial" id=28]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 32 )
+
+[sub_resource type="QuadMesh" id=27]
+resource_local_to_scene = true
+material = SubResource( 28 )
+size = Vector2( 10, 5 )
+
+[sub_resource type="ViewportTexture" id=33]
+viewport_path = NodePath("Lore/V6")
+
+[sub_resource type="SpatialMaterial" id=31]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 33 )
+
+[sub_resource type="QuadMesh" id=30]
+resource_local_to_scene = true
+material = SubResource( 31 )
+size = Vector2( 10, 5 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
@@ -30,6 +132,213 @@ size = 11
 font_data = ExtResource( 3 )
 
 [node name="3D" type="Spatial"]
+
+[node name="Lore" type="Spatial" parent="."]
+
+[node name="V1" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V1"]
+
+[node name="Label" type="Label" parent="Lore/V1/Node2D"]
+margin_right = 1032.0
+margin_bottom = 322.0
+custom_fonts/font = ExtResource( 17 )
+text = "HISTORY OF JIK
+
+---------------- THE BEGINNING ERA ---------------
+Late 2015 - Very Early 2016 - FagSquad is created by Da532. It's only members are
+Da532, Joey and FireC.
+
+Early 2016 - cth103 joins a server that a friend sent the invite link to. FireC was on
+that server under the role \"BOT HOSTER\" as he was hosting a Friend's
+SexualRhinoceros MusicBot instance. They mostly chatted on Skype.
+The next day - After looking at an unreleased ColossalIsCrazy and epic
+roich.jpg video, they go on TeamViewer for the VPS that the bot is hosted
+on and 1337 hax0r it. The same day, he invites FireC to a server he was
+in earlier, the electronicwiz1 one."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V2" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V2"]
+
+[node name="Label" type="Label" parent="Lore/V2/Node2D"]
+margin_right = 1008.0
+margin_bottom = 397.0
+custom_fonts/font = ExtResource( 17 )
+text = "7 days later - cth103 applies for FagSquad. He gets denied.
+
+Mid 2016 - After a myriad of raids that we blamed on JJ, Technach had pretended
+to be hacked as a result of an awful PSA against something I can't understand yet...
+Technach spammed the server with \"HACKED BY JIMMY TEAM\", cth103 creates a
+JimmyTeam Discord group.
+
+~5 days later - A raid that wasn't them on the EW1 server! We kept spamming
+\"JIMMY TEAM\", then it mutated to \"JIMTIM\" then the stich mf said \"JIKTIM\" as
+a typo and We repeated that over and over again, the group had turned into
+a server named \"JIKTIM\". After the raid, a member from the epic hacker group
+gamer that raided the server DMed me and said that she felt bad and asked
+if they did any damage, we chatted for a very short while giving out details
+about the group who epic raided the server, I didn't care much and I went
+back on my hax0r live. Huh, wonder where she's up to these days, probably
+has an OnlyFans... At the end, I'm grateful for the raid because JIKTIM WAS BORN."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V3" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V3"]
+
+[node name="Label" type="Label" parent="Lore/V3/Node2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 17 )
+text = "August 2016 - FireBot, jiktim's first proper project is born. It had ~10k
+users and ~5k servers at it's peak, which is ridiculous. 
+
+Late 2016 - FireC gets exposed as a pedophile, despite being 12.
+jiktim becomes more secretive.
+
+-------------- THE GREAT DEPRESSION ERA ---------------
+Early 2017 - FireC deletes every social media account, only person he
+talked to was me (cth103), jiktim is very, very dead. Not much to talk
+about as we were getting tired of jiktim and quickly moved on to personal
+projects. jiktim had about 4 members then (TTtie, FireC, cth103, jeuxjeux20).
+
+Mid 2017 - FireBot dies, a new project is in the works. ANOTHER. DISCORD.
+BOT. This time it's called Nep and it's bad but better than FireBot.
+
+Late 2017 - FireBot gets officially deleted to ashes. Shut the fuck up about
+tBot, it's not jiktim bro. BTW my (cth's) laptop breaks..."
+
+[node name="V4" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V4"]
+
+[node name="Label" type="Label" parent="Lore/V4/Node2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 17 )
+text = "December 9th 2017 - Nep is officially created. This is epic.
+
+December 18th 2017 - Nep turns into Megumin, congrats.
+You survived a good 9 days.
+
+-------------- ROAD TO RECOVERY ------------
+Early 2018 - We then forget about it and go video game everyday.
+FireC starts to play CS:GO and I play Tic Tac Toe & Tetris like a true epic gamer.
+
+August 2018 - oh yeah the bot....
+
+28 August 2018 - Development on Megumin continues, it's now hosted on glitch.me"
+
+[node name="V5" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V5"]
+
+[node name="Label" type="Label" parent="Lore/V5/Node2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 17 )
+text = "September 2018 - Megumin gets it's last update, the play function is now
+slightly less shit. It unofficially dies in favor of TISHEY'S SHITTY BOT CALLED
+HIBIKI.
+
+Late 2018 - We hang around on Netsky, we make another bot that's called \"thing\",
+then \"NetskyBot\". espi also joins on another jiktim server, the other one is
+deleted which is toxic. After the indoctrination process, the bot gets renamed to
+Chino."
+
+[node name="V6" type="Viewport" parent="Lore"]
+size = Vector2( 1000, 500 )
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="Node2D" type="Node2D" parent="Lore/V6"]
+
+[node name="Label" type="Label" parent="Lore/V6/Node2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 17 )
+text = "To be continued..."
+
+[node name="1" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 17 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/1"]
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="2" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 25 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/2"]
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="3" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 33 )
+mesh = SubResource( 22 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/3"]
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="4" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.0262313, 0, 41.0001 )
+mesh = SubResource( 24 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/4"]
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="5" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 49 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/5"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="6" type="MeshInstance" parent="Lore"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 57 )
+mesh = SubResource( 30 )
+material/0 = null
+
+[node name="Bg" type="MeshInstance" parent="Lore/6"]
+transform = Transform( 1, 0, 6.51683e-07, 0, 1, 0, -6.51683e-07, 0, 1, 0, 0, 0 )
+mesh = SubResource( 16 )
+material/0 = null
 
 [node name="Screenshot" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -7.7 )
@@ -213,6 +522,20 @@ Name = "jeuxjeux20"
 pixel_size = 0.015
 texture = ExtResource( 9 )
 
+[node name="Sol" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0, 10.5 )
+Name = "sol"
+
+[node name="Sprite3D" parent="Sol" index="0"]
+texture = ExtResource( 15 )
+
+[node name="Zorbyte" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.25, 0, 10.5 )
+Name = "zorbyte"
+
+[node name="Sprite3D" parent="Zorbyte" index="0"]
+texture = ExtResource( 16 )
+
 [editable path="Nocturno"]
 
 [editable path="TTTie"]
@@ -224,3 +547,7 @@ texture = ExtResource( 9 )
 [editable path="Cth"]
 
 [editable path="GamesGames20"]
+
+[editable path="Sol"]
+
+[editable path="Zorbyte"]

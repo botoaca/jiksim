@@ -1,4 +1,3 @@
-using System.Text;
 using Godot;
 
 public class Player : KinematicBody
