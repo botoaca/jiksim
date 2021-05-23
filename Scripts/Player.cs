@@ -40,7 +40,7 @@ public class Player : KinematicBody
         if (Input.IsKeyPressed((int)KeyList.W)) moveVector.z -= 1;
         if (Input.IsKeyPressed((int)KeyList.S)) moveVector.z += 1;
         if (Input.IsKeyPressed((int)KeyList.A)) moveVector.x -= 1;
-        if (Input.IsKeyPressed((int) KeyList.D)) moveVector.x += 1;
+        if (Input.IsKeyPressed((int)KeyList.D)) moveVector.x += 1;
         moveVector = moveVector.Normalized();
         moveVector = moveVector.Rotated(new Vector3(0, 1, 0), Rotation.y);
         MoveAndCollide(moveVector * speed * delta);
